@@ -9,7 +9,7 @@ public class Main {
 
         // Create payment strategies
         PaymentStrategy creditCard = new CreditCardPayment("5859-8318-2304-3491", "Ali Gholami");
-        PaymentStrategy paypal = new PayPalPayment("ali.glm484@gamil.com");
+        PaymentStrategy paypal = new PayPalPayment("abolfazl.glm484@gamil.com");
         PaymentStrategy bitcoin = new BitcoinPayment("1FfmbHfnpaZjKFvyi1okTjJJusN455paPH");
 
         // Display customer info
@@ -19,13 +19,13 @@ public class Main {
 
         // Process payments
         regularCustomer.makePayment(creditCard, 10000);
-        regularCustomer.makePayment(paypal, 5000);
+        regularCustomer.makePayment(creditCard, 5000);
 
-        premiumCustomer.makePayment(bitcoin, 320000);
+        premiumCustomer.makePayment(paypal, 320000);
         premiumCustomer.makePayment(paypal, 120000);
 
         premiumCustomer2.makePayment(bitcoin, 900000);
-        premiumCustomer2.makePayment(creditCard, 700000);
+        premiumCustomer2.makePayment(bitcoin, 700000);
 
         // Show payment history
         regularCustomer.showPaymentHistory();
