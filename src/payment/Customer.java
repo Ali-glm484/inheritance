@@ -15,7 +15,7 @@ public abstract class Customer {
 
     public void makePayment(PaymentStrategy paymentStrategy, double amount) {
         paymentStrategy.pay(amount);
-        String paymentInfo = String.format("Amount: %.2f Tomans | Payment Method: %s", amount, paymentStrategy.getPaymentDetails());
+        String paymentInfo = "Amount: " + amount + " Tomans | Payment Method: " + paymentStrategy.getPaymentDetails();
         paymentHistory.add(paymentInfo);
     }
 
